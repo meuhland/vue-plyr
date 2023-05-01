@@ -1,6 +1,6 @@
 {
   "name": "@skjnldsv/vue-plyr",
-  "version": "7.3.1",
+  "version": "7.3.2",
   "description": "A vue component for the plyr video & audio player.",
   "license": "MIT",
   "author": {
@@ -10,7 +10,7 @@
   },
   "repository": "github:skjnldsv/vue-plyr",
   "scripts": {
-    "build": "rm  -rf dist/ && rollup --config rollup.config.js",
+    "build": "shx rm  -rf dist/ && rollup --config rollup.config.js",
     "dev": "echo 'No dev build available, production only' && npm run build",
     "watch": "rollup --config rollup.config.js --watch",
     "lint": "eslint --ext .js,.vue lib examples",
@@ -30,17 +30,15 @@
     "dist/"
   ],
   "engines": {
-    "node": "^16.0.0",
-    "npm": "^7.0.0 || ^8.0.0"
+    "node": "^18.0.0",
+    "npm": "^7.0.0 || ^8.0.0 || ^9.0.0"
   },
   "dependencies": {
     "plyr": "^3.7.8",
-    "vue": "^3.2.47"
+    "vue": "^2.7.14"
   },
   "devDependencies": {
     "@nextcloud/babel-config": "^1.0.0",
-    "@nextcloud/eslint-config": "^8.2.1",
-    "@nextcloud/stylelint-config": "^2.3.0",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@vue/tsconfig": "^0.3.2",
@@ -51,7 +49,8 @@
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-vue": "^6.0.0",
     "rollup-plugin-vue2": "^0.8.1",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "shx": "^0.3.4"
   },
   "keywords": [
     "vue-plyr",
